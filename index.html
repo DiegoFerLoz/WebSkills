@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main></main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+Navbar: (navbar default)
+logo width 100
+
+Carrusel: (bs5-carousel-default)
+añadir dos más, solo salen 3 y necesitamos 5
+cambiar las src de las fotos                            se puede buscar en la pag de bootstrap "carousel" para más info.
+añadir data-bs-interval="1000" para cambiar el intervalo (cada 1 seg)
+
+Acordeón: (bs5-accordion-default)
+cada elemento del acordeón tiene un ID (#collapse1) que vincula el título a la caja, si copia y pegamos la primera caja, se abrirían todas
+a la vez. Hay que cambiar los ID de cada caja. (En el button)
+Por defecto, el acordeón está abierto. Para cerrarlo, quitar la clase "show" de cada elemento del acordeón. Pero esto hace que al abrir otro
+se cierre el anterior, solo deja tener uno abierto. Para arreglar esto, quitar el "data-bs-parent" de cada elemento.
+
+Ventanas modales: (bs5-modal-default)
+Hacerlas debajo del footer, son ventanas que no se ven y se muestran cuando se activa un disparador.
+si la pones tal cual, te añade un botón que saca la ventana. En el botón, con "data-bs-target" se le dice el ID de la modal a abrir.
+En vez de un botón, se puede cambiar por un enlace. Lo importante es el "data-bs-toggle" y el "data-bs-target", llevarlo al elemento
+que vaya a abrir la modal.
+Se puede borrar la parte de JavaScript debajo de la modal, se crea solo y no es necesario.
+Hay varios tamaños, se puede cambiar.
+Formulario.
+
+Barra desplazamiento: ()
+Regla de css: overflow. (la mejor, la auto)
+a la row, añadir la clase flex-nowrap y overflow-auto
+.col-6.col-lg-3.col-xl-2, width 100%
+
+-->
