@@ -230,7 +230,8 @@
                     <div class="col-5">
                         <p><a href="quienesSomos.html" class="text-white text-decoration-none">Quienes somos</a> <br>
                         <a href="#" class="text-white text-decoration-none">Privacidad</a> <br>
-                        <a href="#" class="text-white text-decoration-none">Contacto</a></p>
+                        <a href="#" data-bs-toggle="modal"
+                        data-bs-target="#modalContacto" class="text-white text-decoration-none">Contacto</a></p>
                     </div>
                     <div class="col-1">
                         <button class="btn btn-success"><a href="index.html" class="text-white text-decoration-none">HOME</a></button>
@@ -377,7 +378,7 @@
         <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
         <div
             class="modal fade"
-            id="modalRegistrarse"
+            id="modalContacto"
             tabindex="-1"
             data-bs-keyboard="false"
             
@@ -386,24 +387,21 @@
             aria-hidden="true"
         >
             <div
-                class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal"
+                class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
                 role="document"
             >
                 <div class="modal-content">
                     <div class="text-center">
                         <h3 class="modal-title" id="modalTitleId">
-                            Registro de usuario
+                            Escribe un comentario para contactar
                         </h3>
                     </div>
                     <div class="modal-body">
                         <fieldset class="border-1 p-3 border-bottom border-2 border">
                             <form action="pagina.php" method="post">
-                                <p>Usuario <input type="text" name="Usuario" id="user" class="p-2 py-1 w-100 mt-2"></p>
-                                <p>Contraseña <input type="password" name="Contraseña" id="password" class="p-2 py-1 w-100 mt-2"></p>
-                                <p>Repite la contraseña <input type="password" name="RepetirContraseña" id="repassword" class="p- py-1 w-100 mt-2"></p>
-                                <p>Email <input type="email" name="email" id="email" class="p-2 py-1 w-100 mt-2"></p>
-                                <p>Dirección <input type="text" name="address" id="address" class="p-2 py-1 w-100 mt-2"></p>
-                                <p>Teléfono <input type="tel" name="tel" id="tel" class="p-2 py-1 w-100 mt-2"></p>
+                                <p>Nombre <input type="text" name="Name" id="user" class="p-2 py-1 w-100 mt-2"></p>                         
+                                <p>Tu E-mail <input type="email" name="email" id="email" class="p-2 py-1 w-100 mt-2"></p>
+                                <p>Comentario <br><textarea name="Comentario" id="Comentario" cols="96" rows="5"></textarea></p>
                                 <button
                                     type="submit"
                                     class="btn btn-success rounded-1 w-100 mt-2"
