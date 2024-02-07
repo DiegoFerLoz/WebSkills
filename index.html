@@ -78,7 +78,8 @@
                                 <a class="nav-link" href="#">Registrate</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Inicia sesión</a>
+                                <a class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#modalIniciarSesion" href="#">Inicia sesión</a>
                             </li>
                             
                         </ul>
@@ -119,6 +120,58 @@
                 <p>Catálogo de animales <i class="fa fa-copyright" aria-hidden="true"></i> <strong> S1DAM - S1DAW </strong></p>
             </div>
         </footer>
+
+        <!-- Modal trigger button -->
+        
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div
+            class="modal fade"
+            id="modalIniciarSesion"
+            tabindex="-1"
+            data-bs-keyboard="false"
+            
+            role="dialog"
+            aria-labelledby="modalTitleId"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="text-center">
+                        <h3 class="modal-title" id="modalTitleId">
+                            INICIA SESIÓN
+                        </h3>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset class="border-1 p-3 border-bottom border-2 border">
+                            <form action="pagina.php" method="post">
+                                <p>Usuario <input type="text" name="Usuario" id="user" class="p-2 w-100 mt-2"></p>
+                                <p>Contraseña <input type="password" name="Contraseña" id="password" class="p-2 w-100 mt-2"></p>
+                                <button
+                                    type="submit"
+                                    class="btn btn-success rounded-1 w-100 mt-2"
+                                >
+                                    Entrar
+                                </button>
+                                
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional: Place to the bottom of scripts -->
+        <script>
+            const myModal = new bootstrap.Modal(
+                document.getElementById("modalId"),
+                options,
+            );
+        </script>
+        
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -160,9 +213,9 @@ Hacerlas debajo del footer, son ventanas que no se ven y se muestran cuando se a
 si la pones tal cual, te añade un botón que saca la ventana. En el botón, con "data-bs-target" se le dice el ID de la modal a abrir.
 En vez de un botón, se puede cambiar por un enlace. Lo importante es el "data-bs-toggle" y el "data-bs-target", llevarlo al elemento
 que vaya a abrir la modal.
-Se puede borrar la parte de JavaScript debajo de la modal, se crea solo y no es necesario.
+Se puede borrar la parte de JavaScript debajo de la modal, se crea sola y no es necesario.
 Hay varios tamaños, se puede cambiar.
-PAra poder salir de la modal, quitar "data-bs-backdrop="static""
+Para poder salir de la modal, quitar "data-bs-backdrop="static""
 Formularios.
 
 Barra desplazamiento: ()
