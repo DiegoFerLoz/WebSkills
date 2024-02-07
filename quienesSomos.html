@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-1 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
@@ -37,7 +37,7 @@
                                 <a class="dropdown-item" href="#">Aves</a>
                                 <a class="dropdown-item" href="#">Mamíferos</a>
                                 <a class="dropdown-item" href="#">Peces</a>
-                                <a class="dropdown-item" href="#">Reptiles</a>
+                                <a class="dropdown-item" href="categoriaReptiles.html">Reptiles</a>
                             </div>
                         </li>
                         </li>
@@ -45,7 +45,8 @@
                             <a class="nav-link" href="#">Registrate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicia sesión</a>
+                            <a class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#modalIniciarSesion" href="#">Inicia sesión</a>
                         </li>
 
                     </ul>
@@ -162,7 +163,7 @@
                     </p>
                 </div>
                 <div class="col-5">
-                    <p><a href="#" class="text-white text-decoration-none">Quienes somos</a> <br>
+                    <p><a href="quienesSomos.html" class="text-white text-decoration-none">Quienes somos</a> <br>
                         <a href="#" class="text-white text-decoration-none">Privacidad</a> <br>
                         <a href="#" class="text-white text-decoration-none">Contacto</a>
                     </p>
@@ -176,6 +177,47 @@
             </p>
         </div>
     </footer>
+<!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div
+            class="modal fade"
+            id="modalIniciarSesion"
+            tabindex="-1"
+            data-bs-keyboard="false"
+            
+            role="dialog"
+            aria-labelledby="modalTitleId"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="text-center">
+                        <h3 class="modal-title" id="modalTitleId">
+                            INICIA SESIÓN
+                        </h3>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset class="border-1 p-3 border-bottom border-2 border">
+                            <form action="pagina.php" method="post">
+                                <p>Usuario <input type="text" name="Usuario" id="user" class="p-2 w-100 mt-2"></p>
+                                <p>Contraseña <input type="password" name="Contraseña" id="password" class="p-2 w-100 mt-2"></p>
+                                <button
+                                    type="submit"
+                                    class="btn btn-success rounded-1 w-100 mt-2"
+                                >
+                                    Entrar
+                                </button>
+                                
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
